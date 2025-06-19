@@ -1,0 +1,14 @@
+:root {
+  /* Anything narrower than 560px */
+  --base-font-size: 13px;
+
+  /* iPad Mini and wider, but narrower than iPad Pro */
+  @media (min-width: 768px) {
+    --base-font-size: 14px;
+  }
+
+  /* iPad Pro and wider */
+  @media (min-width: 1024px) {
+    --base-font-size: 15px;
+  }
+}

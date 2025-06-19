@@ -1,0 +1,5 @@
+export { matchPassword } from "./match-password"
+export { onSubmitInputTest } from "./on-submit-input-test"
+export { testEmail } from "./test-email"
+export { testName } from "./test-name"
+export { testPassword } from "./test-password"

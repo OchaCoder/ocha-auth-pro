@@ -1,0 +1,67 @@
+/* By default, many browsers do not stretch the <input> to fill its parent’s height. */
+/* This forces the input to match its container's height and width.*/
+input {
+  height: 100%;
+  width: 100%;
+}
+
+/* Common style for input fields (e.g. Name, Email, Password, etc.) */
+.input-theme {
+  position: relative;
+  border: var(--theme-sub) 2px solid;
+  padding: 3px 10px;
+  border-radius: 5px;
+  min-width: 300px;
+  width: 100%;
+  max-width: 400px;
+  height: 48px;
+}
+
+/* Common style for input labels inside the input field */
+.input-theme label {
+  position: absolute;
+  top: 50%;
+  transform: translate(0px, -50%);
+  padding-right: 10px;
+  font-size: 0.8rem;
+  color: var(--theme-sub);
+  transition:
+    transform ease-out 300ms,
+    top ease-out 300ms;
+}
+
+/* Animation for the input labels */
+.input-theme .input-has-data,
+.input-theme:has(input:focus) label {
+  top: 0;
+  transform: translate(-5px, 8%);
+  font-size: 0.6rem;
+}
+
+/* The visibility (eye) icon on the password input filed. */
+.auth-input-visible {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  right: 10px;
+}
+
+/* Helper texts for the input fields */
+.auth-input-helper {
+  position: absolute;
+  bottom: -18px;
+  left: 12px;
+  font-size: 0.8rem;
+  color: var(--warn);
+}
+
+.input-auth-helper {
+  position: absolute;
+  bottom: -18px;
+  left: 20px;
+  font-size: 0.8rem;
+  color: red;
+}

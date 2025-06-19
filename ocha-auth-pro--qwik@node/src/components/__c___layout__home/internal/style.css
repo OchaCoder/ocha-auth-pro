@@ -1,0 +1,21 @@
+.slot {
+  animation: animate-slot 1000ms ease-out;
+}
+
+@keyframes animate-slot {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+  55% {
+    transform: translateY(-25px);
+  }
+  56% {
+    transform: translateY(25px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

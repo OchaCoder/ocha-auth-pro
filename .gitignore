@@ -1,0 +1,54 @@
+# ========== GENERAL ==========
+.DS_Store
+.env
+*.local
+*.log
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ========== NODE ==========
+node_modules/
+dist/
+lib/
+lib-types/
+server/
+logs/
+coverage/
+tsconfig.tsbuildinfo
+.rollup.cache
+.cache
+.mf
+
+# ========== DOCKER ==========
+docker-compose.yml        # contains secrets (do not commit)
+.docker/
+**/.dockerignore          # this ignores .dockerignore in all folders
+
+# ========== YARN / PNPM ==========
+.yarn/*
+!.yarn/releases
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# ========== EDITORS ==========
+.vscode/
+.vscode/*
+!.vscode/launch.json
+!.vscode/*.code-snippets
+.idea/
+
+# ========== PROJECT STRUCTURE HINT ==========
+ocha-auth-pro--fastify@node/dist/
+ocha-auth-pro--fastify@node/.tsbuildinfo
+ocha-auth-pro--qwik@node/.cache/
+ocha-auth-pro--qwik@node/build/
+ocha-auth-pro--qwik@node/playwright-report/
+
+# ========== PROMETHEUS / MONITORING ==========
+prometheus.yml            # may contain sensitive scrape targets

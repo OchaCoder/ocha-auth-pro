@@ -1,0 +1,96 @@
+.icon-jiggle {
+  transform-origin: 50% 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: icon-jiggle 0.54s infinite;
+}
+
+/* for wrong inputs */
+.shake {
+  border-color: red;
+  animation: shake 300ms;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  animation: spin 600ms linear infinite; /* Spin animation */
+}
+
+.spinner-fast {
+  animation: spin 400ms linear infinite; /* Spin animation */
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(6px, 2px);
+  }
+  15% {
+    transform: translate(-6px, -2px);
+  }
+  30% {
+    transform: translate(6px, 2px);
+  }
+  45% {
+    transform: translate(-8px, -5px);
+  }
+  60% {
+    transform: translate(6px, 2px);
+  }
+  75% {
+    transform: translate(-6px, -2px);
+  }
+  90% {
+    transform: translate(8px, 5px);
+  }
+  100% {
+    transform: translate(-6px, -2px);
+  }
+}
+
+@keyframes toastAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  5% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  95% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+}
+
+@keyframes icon-jiggle {
+  0% {
+    transform: rotate(-7deg) scale(1);
+  }
+  25% {
+    transform: rotate(7deg) scale(1.03);
+  }
+  50% {
+    transform: rotate(-7deg) scale(0.97);
+  }
+  75% {
+    transform: rotate(7deg) scale(1.02);
+  }
+  100% {
+    transform: rotate(-7deg) scale(1);
+  }
+}

@@ -1,0 +1,11 @@
+# This file tells Prometheus to:
+# - Hit http://host.docker.internal:9090/metrics every 10 seconds
+# - Label this target as ocha-auth-monitor for dashboards later
+
+global:
+  scrape_interval: 10s # How often Prometheus scrapes endpoints
+
+scrape_configs:
+  - job_name: "ocha-auth-monitor"
+    static_configs:
+      - targets: ["host.docker.internal:9090"] # Docker containers on Mac can reach your local server this way

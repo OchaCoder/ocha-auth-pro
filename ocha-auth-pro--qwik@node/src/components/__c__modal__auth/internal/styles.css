@@ -1,0 +1,9 @@
+/* Title of the modal (e.g. Sign Up, Sign In, etc)*/
+.auth-modal-title {
+  margin-left: 10px;
+  font-size: 1.2rem;
+  color: var(--dual-light);
+  background-color: var(--theme-sub);
+  transform: skew(-16deg);
+  padding: 4px 10px;
+}

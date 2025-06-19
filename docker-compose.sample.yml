@@ -1,0 +1,124 @@
+services:
+  backend:
+    build: ./ocha-auth-pro--fastify@node
+    container_name: ocha_backend
+    ports:
+      - "127.0.0.1:3002:3002"
+    env_file:
+      - ./ocha-auth-pro--fastify@node/.env
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - ocha-net
+
+  frontend:
+    build: ./ocha-auth-pro--qwik@node
+    container_name: ocha_frontend
+    ports:
+      - "127.0.0.1:3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - ORIGIN=https://your-frontend-domain.com
+    env_file:
+      - ./ocha-auth-pro--qwik@node/.env.local
+    depends_on:
+      - backend
+    networks:
+      - ocha-net
+
+  postgres:
+    image: postgres:16
+    container_name: ocha_postgres
+    environment:
+      POSTGRES_DB: your_db
+      POSTGRES_USER: your_user
+      POSTGRES_PASSWORD: your_password
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+    networks:
+      - ocha-net
+
+  redis:
+    image: redis:7
+    container_name: ocha_redis
+    command: redis-server --requirepass your_redis_password
+    volumes:
+      - redis-data:/data
+    networks:
+      - ocha-net
+
+  monitor:
+    build:
+      context: ./ocha-auth-pro--fastify@node
+      dockerfile: Dockerfile.monitor
+    container_name: ocha_monitor
+    ports:
+      - "127.0.0.1:9090:9090"
+    env_file:
+      - ./ocha-auth-pro--fastify@node/.env
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - ocha-net
+
+  postgres-exporter:
+    image: prometheuscommunity/postgres-exporter:latest
+    container_name: postgres_exporter
+    environment:
+      - DATA_SOURCE_NAME=postgresql://your_user:your_password@ocha_postgres:5432/your_db?sslmode=disable
+    depends_on:
+      - postgres
+    networks:
+      - ocha-net
+
+  redis-exporter:
+    image: oliver006/redis_exporter:latest
+    container_name: redis_exporter
+    environment:
+      - REDIS_ADDR=redis://ocha_redis:6379
+      - REDIS_PASSWORD=your_redis_password
+    depends_on:
+      - redis
+    networks:
+      - ocha-net
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    ports:
+      - "127.0.0.1:19090:9090"
+    volumes:
+      - ./ocha-auth-pro--fastify@node/src/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus-data:/prometheus
+    networks:
+      - ocha-net
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: ocha_grafana
+    ports:
+      - "127.0.0.1:3001:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=your_secure_password
+      - GF_SERVER_ROOT_URL=https://your-grafana-domain.com/
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Viewer
+    volumes:
+      - grafana-data:/var/lib/grafana
+    depends_on:
+      - prometheus
+    networks:
+      - ocha-net
+
+volumes:
+  pg-data:
+  redis-data:
+  prometheus-data:
+  grafana-data:
+
+networks:
+  ocha-net:

@@ -1,0 +1,32 @@
+.keyword-box {
+  display: flex;
+  padding: 5px 10px;
+  background-color: var(--theme-sub);
+  color: var(--dual-light);
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap; /* Prevent the text from breaking into multiple lines */
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  20% {
+    transform: translateY(3px);
+  }
+  60% {
+    transform: translateY(-6px);
+  }
+  70% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.keyword-box:hover {
+  background-color: var(--theme-sub-deep);
+  animation: bounce 600ms ease-out;
+}

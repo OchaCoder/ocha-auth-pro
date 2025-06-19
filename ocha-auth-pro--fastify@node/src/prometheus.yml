@@ -1,0 +1,28 @@
+global:
+  scrape_interval: 60s
+  evaluation_interval: 60s # Evaluate rules every 60 seconds (consistent with scrape interval)
+
+scrape_configs:
+  - job_name: "ocha-auth-monitor"
+    static_configs:
+      - targets: ["monitor:9090"]
+        labels:
+          app: "ocha-auth"
+          environment: "production"
+          deployment: "v2"
+
+  - job_name: "postgres"
+    static_configs:
+      - targets: ["postgres-exporter:9187"]
+        labels:
+          app: "ocha-auth"
+          environment: "production"
+          deployment: "v2"
+
+  - job_name: "redis"
+    static_configs:
+      - targets: ["redis-exporter:9121"]
+        labels:
+          app: "ocha-auth"
+          environment: "production"
+          deployment: "v2"

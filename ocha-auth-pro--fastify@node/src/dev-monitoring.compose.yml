@@ -1,0 +1,21 @@
+# This file spins up local Prometheus and Grafana for development/testing only.
+# Not used in production. Production monitoring is handled via Grafana Cloud.
+# - `Prometheus` collects metrics from `/metrics`
+# - `Grafana` visualize those metrics.
+
+version: "3"
+
+services:
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    ports:
+      - "9091:9090" # Maps container's 9090 to your Mac's 9091
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    ports:
+      - "3001:3000" # Maps container's 3000 to your Mac's 3001

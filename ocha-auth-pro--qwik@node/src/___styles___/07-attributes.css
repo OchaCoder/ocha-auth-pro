@@ -1,0 +1,15 @@
+[lang-en="keep"] {
+  --base-font-size: 16px; /* Override html:lang(ja) font size for [lang-en="keep"] */
+}
+
+[data-over="true"] {
+  border: 1px solid var(--magenta);
+  opacity: 0.9;
+  background-color: var(--gray-700);
+  transition: background-color ease 50ms;
+}
+
+[data-is-dragging="true"] {
+  visibility: hidden;
+  background-color: transparent;
+}

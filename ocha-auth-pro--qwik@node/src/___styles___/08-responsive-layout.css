@@ -1,0 +1,75 @@
+/* 
+
+## Naming rule for the responsive class
+
+rspsv--[property]--[breakpoint value one]--[breakpoint value two]--[breakpoint value three]--[...] 
+
+
+## Screen widths for common devices
+
+- iphone-se -> 375px
+- iphone-14-pro-max -> 430px
+- ipad-mini -> 768px
+- ipad-pro -> 1024px
+
+*/
+
+/* Anything narrower than ipad-mini */
+
+.rspsv--opacity--1--0 {
+  opacity: 1;
+}
+.rspsv--opacity--0--1 {
+  opacity: 0;
+}
+.rspsv--border--bottom--right {
+  border-right: none;
+  border-bottom: 1px solid var(--dual-dark);
+}
+.rspsv--pad--tb5--tb0 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.rspsv--visibility--hidden--visible {
+  visibility: hidden;
+}
+.rspsv--visibility--visible--hidden {
+  visibility: visible;
+}
+.rspsv--position--fixed--absolute {
+  position: fixed;
+}
+
+.rspsv--justify-center--justify-end {
+  justify-content: center;
+}
+
+/* ipad-mini and wider */
+@media (min-width: 768px) {
+  .rspsv--opacity--1--0 {
+    opacity: 0;
+  }
+  .rspsv--opacity--0--1 {
+    opacity: 1;
+  }
+  .rspsv--border--bottom--right {
+    border-right: 1px solid var(--dual-dark);
+    border-bottom: none;
+  }
+  .rspsv--pad--tb5--tb0 {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .rspsv--visibility--hidden--visible {
+    visibility: visible;
+  }
+  .rspsv--visibility--visible--hidden {
+    visibility: hidden;
+  }
+  .rspsv--position--fixed--absolute {
+    position: absolute;
+  }
+  .rspsv--justify-center--justify-end {
+    justify-content: flex-end;
+  }
+}

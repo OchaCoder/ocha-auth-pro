@@ -1,0 +1,57 @@
+:root {
+  /* Color  */
+  --dual-light: #e9e9e9;
+  --dual-dark: #252525;
+
+  --theme: #11e001;
+  --theme-deep: #11d001;
+  --theme-80: #10e00180;
+
+  --theme-sub: #ff8900;
+  --theme-sub-deep: #ff7900;
+  --theme-80: #ffb70089;
+
+  --ok: #17c926;
+  --success: #17c926;
+  --warn: #fc5a5a;
+  --gray: #888;
+
+  --strawberry: #fa5053;
+  --strawberry-deep: #ee3e41;
+
+  --dolphin: #4b52d6;
+  --dolphin-deep: #383daa;
+
+  --olive: #75773c;
+  --olive-deep: #626432;
+
+  --indigo: #3a0be3;
+  --indigo-deep: #490cbb;
+
+  --teal: #006d57;
+  --teal-deep: #035847;
+
+  /* Shadow */
+
+  --shadow-color: 0deg 0% 0%;
+
+  --shadow-elevation-low-light-bottom: 0.3px -0.5px 0.6px hsl(var(--shadow-color) / 0.14), 1px -1.8px 2.2px -3px hsl(var(--shadow-color) / 0.11);
+  --shadow-elevation-medium-light-bottom: 0.3px -0.5px 0.6px hsl(var(--shadow-color) / 0.13), 1.2px -2.3px 2.7px -1.5px hsl(var(--shadow-color) / 0.11),
+    5px -9.2px 11px -3px hsl(var(--shadow-color) / 0.1);
+  --shadow-elevation-high-light-bottom: 0.3px -0.5px 0.6px hsl(var(--shadow-color) / 0.12), 1.5px -2.7px 3.2px -0.6px hsl(var(--shadow-color) / 0.11),
+    3.1px -5.8px 6.9px -1.2px hsl(var(--shadow-color) / 0.1), 6.3px -11.6px 13.9px -1.8px hsl(var(--shadow-color) / 0.1), 12px -22.1px 26.4px -2.4px hsl(var(--shadow-color) / 0.09),
+    21.2px -39px 46.6px -3px hsl(var(--shadow-color) / 0.09);
+
+  --shadow-elevation-low-light-top: -0.2px 0.7px 0.8px hsl(var(--shadow-color) / 0.08), -0.3px 1px 1.1px -1.5px hsl(var(--shadow-color) / 0.07), -0.6px 2.2px 2.4px -3px hsl(var(--shadow-color) / 0.06);
+  --shadow-elevation-medium-light-top: -0.2px 0.7px 0.8px hsl(var(--shadow-color) / 0.07), -0.4px 1.4px 1.5px -0.8px hsl(var(--shadow-color) / 0.06),
+    -0.8px 2.8px 3px -1.5px hsl(var(--shadow-color) / 0.06), -1.6px 5.7px 6.2px -2.3px hsl(var(--shadow-color) / 0.05), -3.2px 11.2px 12.1px -3px hsl(var(--shadow-color) / 0.05);
+  --shadow-elevation-high-light-top: -0.2px 0.7px 0.8px hsl(var(--shadow-color) / 0.06), -0.6px 2px 2.2px -0.3px hsl(var(--shadow-color) / 0.06),
+    -1px 3.4px 3.7px -0.7px hsl(var(--shadow-color) / 0.06), -1.5px 5.2px 5.6px -1px hsl(var(--shadow-color) / 0.06), -2.2px 7.7px 8.3px -1.4px hsl(var(--shadow-color) / 0.05),
+    -3.3px 11.4px 12.4px -1.7px hsl(var(--shadow-color) / 0.05), -4.7px 16.5px 17.9px -2px hsl(var(--shadow-color) / 0.05), -6.7px 23.6px 25.6px -2.4px hsl(var(--shadow-color) / 0.05),
+    -9.4px 32.8px 35.6px -2.7px hsl(var(--shadow-color) / 0.05), -12.8px 44.6px 48.4px -3px hsl(var(--shadow-color) / 0.04);
+}
+
+.dark {
+  --dual-light: #252525;
+  --dual-dark: #efefef;
+}

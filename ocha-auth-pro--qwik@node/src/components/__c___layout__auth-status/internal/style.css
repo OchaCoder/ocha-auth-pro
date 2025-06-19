@@ -1,0 +1,13 @@
+.scoped-items-shell {
+  width: 140px;
+  margin-top: 6px;
+  border: solid 2px var(--theme-sub);
+  border-radius: 6px;
+  transform: translateY(30px);
+}
+
+.scoped-item {
+  transition:
+    color ease-out 300ms,
+    background-color ease-out 300ms;
+}

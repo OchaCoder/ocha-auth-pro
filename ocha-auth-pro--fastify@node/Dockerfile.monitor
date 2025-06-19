@@ -1,0 +1,26 @@
+# Use the same Node.js version as the main Dockerfile
+FROM node:20-slim
+
+# Set working directory
+WORKDIR /app
+
+# Copy package.json and package-lock.json
+COPY package*.json ./
+
+# Install all dependencies (including devDependencies for TypeScript)
+RUN npm ci
+
+# Copy the entire project
+COPY . .
+
+# Build the TypeScript code
+RUN npm run build
+
+# Remove devDependencies to reduce image size
+RUN npm ci --production
+
+# Expose the monitoring port
+EXPOSE 9090
+
+# Run the compiled monitoring server
+CMD ["node", "dist/server-monitor.js"]
