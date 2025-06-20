@@ -17,10 +17,10 @@ It’s designed to showcase what happens when you fully commit to:
 - Clean code and type safety
 - …and a healthy dose of obsessive craftsmanship 😭🔥
 
-🚀 **Live Demo**: https://ocha-auth-pro.ochacoder.com
-🌞 **Grafana Dashboard**: https://ocha-auth-pro.ochacoder.com/grafana/
-⚡️ **Google Page Speed Result**: https://ocha-auth-pro.ochacoder.com/speed-test/
-🫶🏻 **GitHub Repo**: https://ocha-auth-pro.ochacoder.com/github/
+🚀 **Live Demo**: [https://ocha-auth-pro.ochacoder.com]
+🌞 **Grafana Dashboard**: [https://ocha-auth-pro.ochacoder.com/grafana/]
+⚡️ **Google Page Speed Result**: [https://ocha-auth-pro.ochacoder.com/speed-test/]
+🫶🏻 **GitHub Repo**: [https://ocha-auth-pro.ochacoder.com/github/]
 
 ---
 
