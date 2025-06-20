@@ -23,7 +23,7 @@ tsconfig.tsbuildinfo
 .mf
 
 # ========== DOCKER ==========
-docker-compose.yml
+docker-compose.yml   #white space on purpose
 docker-compose.yaml
 .docker/
 **/.dockerignore
