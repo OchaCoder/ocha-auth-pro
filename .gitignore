@@ -23,9 +23,10 @@ tsconfig.tsbuildinfo
 .mf
 
 # ========== DOCKER ==========
-docker-compose.yml        # contains secrets (do not commit)
+docker-compose.yml
+docker-compose.yaml
 .docker/
-**/.dockerignore          # this ignores .dockerignore in all folders
+**/.dockerignore
 
 # ========== YARN / PNPM ==========
 .yarn/*
