@@ -20,7 +20,7 @@ It’s designed to showcase what happens when you fully commit to:
 🚀 **Live Demo**: [ocha-auth-pro.ochacoder.com](https://ocha-auth-pro.ochacoder.com)\
 🌞 **Grafana Dashboard**: [ocha-auth-pro.ochacoder.com/grafana/](https://ocha-auth-pro.ochacoder.com/grafana/)\
 ⚡️ **Google Page Speed Result**: [ocha-auth-pro.ochacoder.com/speed-test/](https://ocha-auth-pro.ochacoder.com/speed-test/)\
-🫶🏻 **GitHub Repo**: [ocha-auth-pro.ochacoder.com/github/](https://ocha-auth-pro.ochacoder.com/github/)\
+🫶🏻 **GitHub Repo**: [ocha-auth-pro.ochacoder.com/github/](https://ocha-auth-pro.ochacoder.com/github/)
 
 ---
 
