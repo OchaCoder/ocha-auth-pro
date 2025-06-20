@@ -15,12 +15,12 @@ It’s designed to showcase what happens when you fully commit to:
 - Meticulous error handling
 - Robust observability & monitoring
 - Clean code and type safety
-- …and a healthy dose of obsessive craftsmanship 🤪🔥
+- …and a healthy dose of obsessive craftsmanship 😭🔥
 
-🚀 **Live Demo**: [ocha-auth-pro.ochacoder.com]  
-🌞 **Grafana Dashboard**: [ocha-auth-pro.ochacoder.com/grafana/]  
-⚡️ **Google Page Speed Result**: [ocha-auth-pro.ochacoder.com/speed-test/]  
-🫶🏻 **GitHub Repo**: [ocha-auth-pro.ochacoder.com/github/]
+🚀 **Live Demo**: [ocha-auth-pro.ochacoder.com](https:ocha-auth-pro.ochacoder.com)  
+🌞 **Grafana Dashboard**: [ocha-auth-pro.ochacoder.com/grafana/](https:ocha-auth-pro.ochacoder.com/grafana/)
+⚡️ **Google Page Speed Result**: [ocha-auth-pro.ochacoder.com/speed-test/](https:ocha-auth-pro.ochacoder.com/speed-test/)
+🫶🏻 **GitHub Repo**: [ocha-auth-pro.ochacoder.com/github/](https://ocha-auth-pro.ochacoder.com/github/)
 
 ---
 

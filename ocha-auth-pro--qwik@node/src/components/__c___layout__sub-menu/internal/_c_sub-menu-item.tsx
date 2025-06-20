@@ -1,5 +1,5 @@
 import { component$, useStylesScoped$ } from "@builder.io/qwik"
-import { Link, useLocation } from "@builder.io/qwik-city"
+import { useLocation } from "@builder.io/qwik-city"
 
 export const SubMenuItem = component$(({ page }: { page: { title: string; path: string } }) => {
   const loc = useLocation().url.pathname
@@ -21,9 +21,9 @@ export const SubMenuItem = component$(({ page }: { page: { title: string; path: 
   return (
     <>
       <div class={utilClasses}>
-        <Link href={page.path} class={`no-underline`}>
+        <a href={page.path} class={`no-underline`}>
           {page.title}
-        </Link>
+        </a>
       </div>
     </>
   )
