@@ -11,6 +11,7 @@ services:
       - redis
     networks:
       - ocha-net
+    restart: unless-stopped
 
   frontend:
     build: ./ocha-auth-pro--qwik@node
@@ -27,6 +28,7 @@ services:
       - backend
     networks:
       - ocha-net
+    restart: unless-stopped
 
   postgres:
     image: postgres:16
@@ -39,6 +41,7 @@ services:
       - pg-data:/var/lib/postgresql/data
     networks:
       - ocha-net
+    restart: unless-stopped
 
   redis:
     image: redis:7
@@ -48,6 +51,7 @@ services:
       - redis-data:/data
     networks:
       - ocha-net
+    restart: unless-stopped
 
   monitor:
     build:
@@ -63,6 +67,7 @@ services:
       - redis
     networks:
       - ocha-net
+    restart: unless-stopped
 
   postgres-exporter:
     image: prometheuscommunity/postgres-exporter:latest
@@ -73,6 +78,7 @@ services:
       - postgres
     networks:
       - ocha-net
+    restart: unless-stopped
 
   redis-exporter:
     image: oliver006/redis_exporter:latest
@@ -84,6 +90,7 @@ services:
       - redis
     networks:
       - ocha-net
+    restart: unless-stopped
 
   prometheus:
     image: prom/prometheus:latest
@@ -95,6 +102,7 @@ services:
       - prometheus-data:/prometheus
     networks:
       - ocha-net
+    restart: unless-stopped
 
   grafana:
     image: grafana/grafana:latest
@@ -113,6 +121,7 @@ services:
       - prometheus
     networks:
       - ocha-net
+    restart: unless-stopped
 
 volumes:
   pg-data:

@@ -21,7 +21,7 @@ export const SubMenuItem = component$(({ page }: { page: { title: string; path: 
   return (
     <>
       <div class={utilClasses}>
-        <a href={page.path} class={`no-underline`}>
+        <a href={page.path} class={`no-underline`} target="_blank" rel="noopener noreferrer">
           {page.title}
         </a>
       </div>

@@ -11,11 +11,11 @@ export default component$(() => {
 })
 
 export const head: DocumentHead = {
-  title: "Welcome to Qwik",
+  title: "Ocha-Auth-Pro",
   meta: [
     {
-      name: "description",
-      content: "Qwik site description",
+      name: "Ocha-Auth-Pro : Secure, Scalable Auth System from Scratch",
+      content: "A lovingly overbuilt, feature-rich authentication system built with Qwik, Fastify, PostgreSQL, Redis, Paseto V4, Argon2, Prometheus, Grafana, and more.",
     },
   ],
 }
