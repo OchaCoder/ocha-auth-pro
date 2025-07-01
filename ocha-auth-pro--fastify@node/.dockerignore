@@ -1,9 +1,0 @@
-node_modules
-dist
-.env
-.git
-.gitignore
-Dockerfile
-Dockerfile.monitor
-src/dev-monitoring.compose.yml
-src/prometheus.yml
